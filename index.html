@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Replica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">Spotify</div>
+      <nav class="main-nav">
+        <a class="active" href="#">Home</a>
+        <a href="#">Search</a>
+        <a href="#">Your Library</a>
+      </nav>
+      <div class="secondary-nav">
+        <a href="#">Liked Songs</a>
+        <a href="#">Made For You</a>
+        <a href="#">Charts</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <h1>Good Afternoon</h1>
+          <p>Listen to your favorite songs and discover new playlists.</p>
+        </div>
+        <div class="profile">Guest</div>
+      </header>
+
+      <section class="preview-grid">
+        <article class="preview-card purple">
+          <div class="preview-label">Playlist</div>
+          <h2>Focus Flow</h2>
+          <p>Soft beats for deep work.</p>
+        </article>
+        <article class="preview-card teal">
+          <div class="preview-label">Made For You</div>
+          <h2>Daily Drive</h2>
+          <p>Vibes to keep you moving.</p>
+        </article>
+        <article class="preview-card orange">
+          <div class="preview-label">Mood</div>
+          <h2>Chill Nights</h2>
+          <p>Relax with mellow tracks.</p>
+        </article>
+        <article class="preview-card blue">
+          <div class="preview-label">New</div>
+          <h2>Fresh Finds</h2>
+          <p>Latest hits from around the world.</p>
+        </article>
+      </section>
+
+      <section class="track-list-section">
+        <div class="section-title">
+          <h2>Popular this week</h2>
+        </div>
+        <div class="track-table">
+          <div class="track-table-header">
+            <span>Song</span>
+            <span>Artist</span>
+            <span>Album</span>
+            <span>Length</span>
+          </div>
+          <ul id="song-list" class="track-items"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="player-bar">
+    <div class="player-left">
+      <img id="player-cover" src="" alt="Album cover">
+      <div class="track-details">
+        <span id="player-title">Select a track</span>
+        <span id="player-artist">Tap a song to play</span>
+      </div>
+    </div>
+
+    <div class="player-center">
+      <div class="controls">
+        <button id="prev-btn" aria-label="Previous">◀◀</button>
+        <button id="play-pause-btn" aria-label="Play">▶</button>
+        <button id="next-btn" aria-label="Next">▶▶</button>
+      </div>
+      <div class="progress-row">
+        <span id="current-time">0:00</span>
+        <input id="seek" type="range" min="0" max="100" value="0">
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <div class="player-right">
+      <button id="mute-btn" aria-label="Toggle mute">🔊</button>
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+    </div>
+  </footer>
+
+  <audio id="audio-player"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
